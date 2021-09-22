@@ -31,7 +31,7 @@ For other OS please follow instructions from [here](https://docs.edgeimpulse.com
 #### Connecting WIO to Edge Impulse
 
 1. Connect WIO to computer using USB-C cable
-2. Enter bootloader byt sliding power switch down twice in quick succession.
+2. Enter bootloader by sliding power switch down twice in quick succession.
 ![enter_bootloader_wio](https://files.seeedstudio.com/wiki/Wio-Terminal/img/Wio-Terminal-Bootloader.png)
 3. WIO will show up as a new USB drive named `Arduino`, copy [latest released precompiled UF2 firmware](https://github.com/Seeed-Studio/Seeed_Arduino_edgeimpulse/releases) to `Arduino` drive
 4. Start sending data to Edge Impulse, open a powershell and type
