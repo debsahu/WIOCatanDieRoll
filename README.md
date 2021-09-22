@@ -2,7 +2,12 @@
 
 Machine Learning in WIO Terminal (Seeed Studio) to recognize shake and roll two die using True Random Number Generator (TRNG)
 
-## Projects Included
+## Hardware
+
+- [WIO Terminal (Seeed Studio)](https://www.seeedstudio.com/Wio-Terminal-p-4509.html)
+- USB-C cable
+
+## Software
 
 - **WIOImuTap**: Uses in-built IMU to look for double tap to roll 2 die using TRNG 
 - **EdgeImpulse**: Upload and train NN using sensor data on [Edge Impulse](https://www.edgeimpulse.com/), deployed on WIO with live classification on serial port. [Model is included](https://studio.edgeimpulse.com/public/48805/latest)
@@ -91,5 +96,5 @@ Click on **Model Testing** > **Classify All**
 
 ![Build-Library](https://github.com/debsahu/WIOCatanDieRoll/blob/main/docs/build_lib.png)
 
-4. Copy conectes from **src** directory into your project
-5. See implmentation in **EdgeImpulse** folder
+4. Copy contents from **src** directory into your project
+5. See implementation in **EdgeImpulse** folder
