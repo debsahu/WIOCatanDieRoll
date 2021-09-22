@@ -13,8 +13,6 @@ uint32_t roll1, roll2, lastRoll = 0;
 bool dieRolled = false;
 volatile bool shakeFlag = false;
 
-#define THRESHOLD 40 //Adjust this threshold value for sensitivity of clicking
-
 void trngInit(void) // Initialize the TRNG
 {
     MCLK->APBCMASK.bit.TRNG_ = 1; // enable clock  (APBC clock is already enabled)

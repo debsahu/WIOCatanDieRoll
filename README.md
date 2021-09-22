@@ -38,7 +38,7 @@ Follow instructions on screen by logging into your Edge Impulse account and sele
 
 ![EI-WIO-Connected](https://github.com/debsahu/WIOCatanDieRoll/blob/main/docs/device_ei_connected.png)
 
-#### Storing Accelerometer data on Edge Impulse
+### 2. Storing Accelerometer data on Edge Impulse
 
 1. Start collecting data from device:
 
@@ -56,7 +56,7 @@ Follow instructions on screen by logging into your Edge Impulse account and sele
 5. Repeat to have lots of data for each label
 6. Do the same for **Test data** (top-left) for each label
 
-#### Create Impulse & Process/Clean up data & training NN
+### 3. Create Impulse & Process/Clean up data & training NN
 
 1. Create a new impulse (overall design of the project)
 
@@ -74,13 +74,13 @@ Follow instructions on screen by logging into your Edge Impulse account and sele
 
 ![NN-Train](https://github.com/debsahu/WIOCatanDieRoll/blob/main/docs/nn_train.png)
 
-#### Testing your NN performance
+### 4. Testing your NN performance
 
 Click on **Model Testing** > **Classify All**
 
 ![Model-Testing](https://github.com/debsahu/WIOCatanDieRoll/blob/main/docs/model_testing.png)
 
-#### Deploying your NN on WIO
+### 5. Deploying your NN on WIO
 
 1. Click on **Deployment**
 2. Select **Arduino library**
@@ -89,7 +89,7 @@ Click on **Model Testing** > **Classify All**
 
 3. Build your Arduino library
 
-[Build-Library](https://github.com/debsahu/WIOCatanDieRoll/blob/main/docs/build_lib.png)
+![Build-Library](https://github.com/debsahu/WIOCatanDieRoll/blob/main/docs/build_lib.png)
 
 4. Copy conectes from **src** directory into your project
 5. See implmentation in **EdgeImpulse** folder
