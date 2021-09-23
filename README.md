@@ -39,6 +39,7 @@ For other OS please follow instructions from [here](https://docs.edgeimpulse.com
 C:\> edge-impulse-daemon
 ```
 Follow instructions on screen by logging into your Edge Impulse account and selecting a project.
+
 5. Open the [Edge Impulse project](https://studio.edgeimpulse.com/studio/select-project?autoredirect=1) on a browser and see if WIO is connected
 
 ![EI-WIO-Connected](https://github.com/debsahu/WIOCatanDieRoll/blob/main/docs/device_ei_connected.png)
