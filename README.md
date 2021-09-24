@@ -13,6 +13,10 @@ Machine Learning in WIO Terminal (Seeed Studio) to recognize shake and roll two 
 - **EdgeImpulse**: Upload and train NN using sensor data on [Edge Impulse](https://www.edgeimpulse.com/), deployed on WIO with live classification on serial port. [Model is included](https://studio.edgeimpulse.com/public/48805/latest)
 - **AIShakeDie**: Uses in-built IMU to recognize shake using NN from **Edge Impulse** and rolls 2 die using TRNG
 
+## TinkerGen IDE (Online)
+
+- Follow instructions form here: [debsahu/WIOCatanDieRoll/TinkerGen](https://github.com/debsahu/WIOCatanDieRoll/tree/main/TinkerGen)
+
 ## Collecting data from WIO & storing on Edge Impulse, training Neural Network on Edge Impulse, Export and deploy on WIO
 
 ### 1. Collecting data from WIO & storing on Edge Impulse
