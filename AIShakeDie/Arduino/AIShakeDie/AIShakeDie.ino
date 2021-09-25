@@ -193,7 +193,7 @@ void loop()
     //     Serial.println("%");
     // }
 
-    if (result.classification[2].value > 0.75)
+    if (result.classification[2].value > 0.99)
     {
         gen2RandomNumbers();
     }
