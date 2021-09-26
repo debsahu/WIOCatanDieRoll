@@ -2,6 +2,11 @@
 
 Machine Learning in WIO Terminal (Seeed Studio) to recognize shake and roll two die using True Random Number Generator (TRNG)
 
+----------------
+## Youtube
+
+[![WIO-Catan-Die-Roll](https://img.youtube.com/vi/emjb2YybIKw/0.jpg)](https://www.youtube.com/watch?v=emjb2YybIKw)
+
 ## Hardware
 
 - [WIO Terminal (Seeed Studio)](https://www.seeedstudio.com/Wio-Terminal-p-4509.html)
