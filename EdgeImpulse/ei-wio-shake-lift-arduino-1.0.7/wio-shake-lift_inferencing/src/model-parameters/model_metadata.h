@@ -36,6 +36,7 @@
 #define EI_CLASSIFIER_SENSOR_MICROPHONE          1
 #define EI_CLASSIFIER_SENSOR_ACCELEROMETER       2
 #define EI_CLASSIFIER_SENSOR_CAMERA              3
+#define EI_CLASSIFIER_SENSOR_9DOF                4
 
 // These must match the enum values in TensorFlow Lite's "TfLiteType"
 #define EI_CLASSIFIER_DATATYPE_FLOAT32           1
@@ -44,9 +45,9 @@
 #define EI_CLASSIFIER_PROJECT_ID                 48805
 #define EI_CLASSIFIER_PROJECT_OWNER              "Deb"
 #define EI_CLASSIFIER_PROJECT_NAME               "wio-shake-lift"
-#define EI_CLASSIFIER_PROJECT_DEPLOY_VERSION     6
+#define EI_CLASSIFIER_PROJECT_DEPLOY_VERSION     7
 #define EI_CLASSIFIER_NN_INPUT_FRAME_SIZE        33
-#define EI_CLASSIFIER_RAW_SAMPLE_COUNT           125
+#define EI_CLASSIFIER_RAW_SAMPLE_COUNT           100
 #define EI_CLASSIFIER_RAW_SAMPLES_PER_FRAME      3
 #define EI_CLASSIFIER_DSP_INPUT_FRAME_SIZE       (EI_CLASSIFIER_RAW_SAMPLE_COUNT * EI_CLASSIFIER_RAW_SAMPLES_PER_FRAME)
 #define EI_CLASSIFIER_INPUT_WIDTH                0
@@ -65,7 +66,7 @@
 #define EI_CLASSIFIER_TFLITE_ARENA_SIZE          2579
 #define EI_CLASSIFIER_TFLITE_INPUT_DATATYPE      EI_CLASSIFIER_DATATYPE_INT8
 #define EI_CLASSIFIER_TFLITE_INPUT_QUANTIZED     1
-#define EI_CLASSIFIER_TFLITE_INPUT_SCALE         0.05022226274013519
+#define EI_CLASSIFIER_TFLITE_INPUT_SCALE         0.028011204674839973
 #define EI_CLASSIFIER_TFLITE_INPUT_ZEROPOINT     -128
 #define EI_CLASSIFIER_TFLITE_OUTPUT_DATATYPE     EI_CLASSIFIER_DATATYPE_INT8
 #define EI_CLASSIFIER_TFLITE_OUTPUT_QUANTIZED    1
@@ -186,13 +187,13 @@ const uint32_t ei_dsp_config_3_axes_size = 3;
 ei_dsp_config_spectral_analysis_t ei_dsp_config_3 = {
     1,
     3,
-    1.00000f,
+    0.02500f,
     "low",
-    6.00000f,
+    10.00000f,
     6,
     128,
     3,
-    0.10000f,
+    0.05000f,
     "0.1, 0.5, 1.0, 2.0, 5.0"
 };
 

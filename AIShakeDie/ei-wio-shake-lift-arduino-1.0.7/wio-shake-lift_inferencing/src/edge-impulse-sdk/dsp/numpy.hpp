@@ -33,7 +33,9 @@
 #include "memory.hpp"
 #include "dct/fast-dct-fft.h"
 #include "kissfft/kiss_fftr.h"
+#if EIDSP_USE_CMSIS_DSP
 #include "edge-impulse-sdk/CMSIS/DSP/Include/arm_math.h"
+#endif
 
 #ifdef __MBED__
 #include "mbed.h"
@@ -1409,6 +1411,7 @@ public:
      * @returns 0 if OK
      */
     static int rfft(const EIDSP_i16 *src, size_t src_size, EIDSP_i16 *output, size_t output_size, size_t n_fft) {
+#if EIDSP_USE_CMSIS_DSP
         size_t n_fft_out_features = (n_fft / 2) + 1;
         if (output_size != n_fft_out_features) {
             EIDSP_ERR(EIDSP_BUFFER_SIZE_MISMATCH);
@@ -1458,8 +1461,10 @@ public:
             }
         }
         return EIDSP_OK;
+#else
+        return EIDSP_REQUIRES_CMSIS_DSP;
+#endif
     }
-
 
     /**
      * Compute the one-dimensional discrete Fourier Transform for real input.
@@ -1472,6 +1477,7 @@ public:
      * @returns 0 if OK
      */
     static int rfft(const EIDSP_i32 *src, size_t src_size, EIDSP_i32 *output, size_t output_size, size_t n_fft) {
+#if EIDSP_USE_CMSIS_DSP
         size_t n_fft_out_features = (n_fft / 2) + 1;
         if (output_size != n_fft_out_features) {
             EIDSP_ERR(EIDSP_BUFFER_SIZE_MISMATCH);
@@ -1527,6 +1533,9 @@ public:
             }
         }
         return EIDSP_OK;
+#else
+        return EIDSP_REQUIRES_CMSIS_DSP;
+#endif
     }
 
     /**
@@ -1615,6 +1624,7 @@ public:
     }
 
     static int rfft(const EIDSP_i16 *src, size_t src_size, fft_complex_i16_t *output, size_t output_size, size_t n_fft) {
+#if EIDSP_USE_CMSIS_DSP
         size_t n_fft_out_features = (n_fft / 2) + 1;
         if (output_size != n_fft_out_features) {
             EIDSP_ERR(EIDSP_BUFFER_SIZE_MISMATCH);
@@ -1677,6 +1687,9 @@ public:
         }
 
         return EIDSP_OK;
+#else
+        return EIDSP_REQUIRES_CMSIS_DSP;
+#endif
     }
 
     /**

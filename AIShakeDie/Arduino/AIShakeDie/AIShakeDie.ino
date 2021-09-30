@@ -181,19 +181,19 @@ void loop()
     }
 
     // print the predictions
-    // ei_printf("Predictions ");
-    // ei_printf("(DSP: %d ms., Classification: %d ms., Anomaly: %d ms.)",
-    //           result.timing.dsp, result.timing.classification, result.timing.anomaly);
-    // ei_printf(": \n");
-    // for (size_t ix = 0; ix < EI_CLASSIFIER_LABEL_COUNT; ix++)
-    // {
-    //     Serial.print(result.classification[ix].label);
-    //     Serial.print(": ");
-    //     Serial.print(100 * result.classification[ix].value);
-    //     Serial.println("%");
-    // }
+    ei_printf("Predictions ");
+    ei_printf("(DSP: %d ms., Classification: %d ms., Anomaly: %d ms.)",
+              result.timing.dsp, result.timing.classification, result.timing.anomaly);
+    ei_printf(": \n");
+    for (size_t ix = 0; ix < EI_CLASSIFIER_LABEL_COUNT; ix++)
+    {
+        Serial.print(result.classification[ix].label);
+        Serial.print(": ");
+        Serial.print(100 * result.classification[ix].value);
+        Serial.println("%");
+    }
 
-    if (result.classification[2].value > 0.99)
+    if (result.classification[2].value > 0.80)
     {
         gen2RandomNumbers();
     }
